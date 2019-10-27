@@ -14,11 +14,11 @@ It contains:
 To compile your project:
 
 ```sh
-docker run -v `pwd`:/opt/app pasdam/docker-go-proto:latest protoc -I=opt/app/proto --go_out=/opt/app/generated/pkg /opt/app/proto/your_proto.proto
+docker run --rm -v `pwd`:/opt/app pasdam/docker-go-proto:latest protoc -I=opt/app/proto --go_out=/opt/app/generated/pkg /opt/app/proto/your_proto.proto
 ```
 
 or if you have a makefile:
 
 ```sh
-docker run -v `pwd`:/opt/app pasdam/docker-go-proto:latest make -C /opt/app build
+docker run --rm -v `pwd`:/opt/app pasdam/docker-go-proto:latest make -C /opt/app build
 ```
