@@ -22,6 +22,8 @@ ARG PROTOC_VERSION=3.6.1-r1
 
 RUN apk update --no-cache && \
     apk add \
+        gcc \
+        libc-dev \
         make \
         protobuf=${PROTOC_VERSION}
 
