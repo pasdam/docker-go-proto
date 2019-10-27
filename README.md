@@ -22,3 +22,7 @@ or if you have a makefile:
 ```sh
 docker run --rm -v `pwd`:/opt/app pasdam/docker-go-proto:latest make -C /opt/app build
 ```
+
+## Limitations
+
+The images based on Alpine are [not able to execute](https://github.com/golang/go/issues/14481) the `go race` command as of now.
