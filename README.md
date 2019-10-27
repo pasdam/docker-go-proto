@@ -1,6 +1,6 @@
 # docker-go-proto
 
-Docker image to build go project with proto files.
+Docker image to build go projects with proto files.
 
 It contains:
 
