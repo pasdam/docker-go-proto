@@ -6,8 +6,8 @@ ARG PROTOC_GO_VERSION=v1.3.2
 
 FROM golang:${GO_VERSION} as builder
 
-RUN apk update && \
-    apk add --no-cache git
+RUN apk update --no-cache && \
+    apk add git
 
 RUN go get -d -u github.com/golang/protobuf/protoc-gen-go && \
     git -C "$(go env GOPATH)"/src/github.com/golang/protobuf checkout ${PROTOC_GO_VERSION} && \
@@ -20,8 +20,8 @@ FROM golang:${GO_VERSION}
 
 ARG PROTOC_VERSION=3.6.1-r1
 
-RUN apk update && \
-    apk add --no-cache \
+RUN apk update --no-cache && \
+    apk add \
         make \
         protobuf=${PROTOC_VERSION}
 
