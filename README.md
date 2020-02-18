@@ -1,5 +1,13 @@
 # docker-go-proto
 
+---
+
+**DEPRECATED**
+
+This image is deprecated, please use [uber/prototool](https://hub.docker.com/r/uber/prototool) instead.
+
+---
+
 Docker image to build go projects with proto files.
 
 It contains:
